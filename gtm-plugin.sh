@@ -22,7 +22,7 @@ function gtm_record_terminal() {
 }
 
 if [ -n "$ZSH_VERSION" ]; then
-  autoload -Uz add-zsh-hook
+  autoload add-zsh-hook
   add-zsh-hook precmd gtm_record_terminal
 elif [ -n "$BASH_VERSION" ]; then
   PROMPT_COMMAND="gtm_record_terminal; $PROMPT_COMMAND"
